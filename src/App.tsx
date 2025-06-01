@@ -1,25 +1,27 @@
+// src/App.js
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { TaskProvider } from './context/TaskContext';
+import TaskDashboard from './components/organisms/TaskDashboard';
+import './styles/globals.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TaskProvider>
+      <div className="app">
+        <header className="header">
+          <div className="container">
+            <h1>TaskMaster Pro</h1>
+            <p>React Interview Preparation Project</p>
+          </div>
+        </header>
+        
+        <main className="main-content">
+          <div className="container">
+            <TaskDashboard />
+          </div>
+        </main>
+      </div>
+    </TaskProvider>
   );
 }
 
