@@ -1,4 +1,6 @@
 import React, { createContext, useReducer, useContext } from 'react';
+import { taskReducer } from './taskReducer';
+import { initialTaskState } from '../types/task.types';
 
 const TaskContext = createContext();
 
